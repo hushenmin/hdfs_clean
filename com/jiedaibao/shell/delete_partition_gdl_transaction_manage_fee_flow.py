@@ -7,6 +7,8 @@ name : hushenmin
 import os
 import sys
 from  com.jiedaibao.utils.dateutil import *
+sys.path.append('../utils/')
+
 def delete_partition(str,days=7):
     lines = os.popen("/opt/core/hadoop/bin/hadoop fs -ls %s" % str).readlines()
     for lines in lines:
